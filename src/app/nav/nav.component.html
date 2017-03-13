@@ -1,0 +1,20 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">ToDoList</a>
+      <ul
+        *ngIf="!isLoggedIn()"
+        id="nav-mobile"
+        class="left hide-on-med-and-down"
+      >
+        <li><a (click)="login()">Login</a></li>
+      </ul>
+      <ul
+        *ngIf="isLoggedIn()"
+        id="nav-mobile"
+        class="left hide-on-med-and-down"
+      >
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>

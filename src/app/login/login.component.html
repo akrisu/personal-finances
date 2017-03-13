@@ -1,0 +1,15 @@
+<p>
+  <a
+    *ngIf="!isLoggedIn()"
+    (click)="login()"
+    class="btn"
+  >
+    Zaloguj
+  </a>
+  <a
+    *ngIf="isLoggedIn()"
+    (click)="logout()"
+  >
+    Wyloguj
+  </a>
+</p>
